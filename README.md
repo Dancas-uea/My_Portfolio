@@ -25,7 +25,7 @@
 ## 📸 Vista previa
 
 <p align="center">
-  <img width="800" height="7317" alt="image" src="https://github.com/user-attachments/assets/ef6a2edc-ae49-4657-b73c-3d3ab7fd8db0" />
+  <img width="979" height="544" alt="image" src="https://github.com/user-attachments/assets/694cd387-bf6e-41e3-a987-3b9cc98253d4" />
 </p>
 
 
