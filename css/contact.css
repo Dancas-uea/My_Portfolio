@@ -2,9 +2,6 @@
    contact.css — Sección Contact + Footer
    ============================================================ */
 
-/* ============================================================
-   CONTACT
-   ============================================================ */
 .contact { border-top: 1px solid var(--border); }
 
 .contact-grid {
@@ -12,6 +9,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
+  /* FIX: no desborda */
+  width: 100%;
 }
 
 .form-block { width: 100%; }
@@ -29,12 +28,30 @@
   font-size: 13px;
   outline: none;
   transition: border-color var(--transition);
+  /* FIX: no desborda el contenedor */
+  box-sizing: border-box;
+  max-width: 100%;
 }
 .form-input:focus { border-color: var(--accent); }
 .form-textarea { resize: vertical; min-height: 100px; }
 
 .run-btn    { width: 100%; justify-content: center; margin-top: 8px; }
 .form-status { font-size: 12px; min-height: 18px; color: var(--accent); }
+
+/* FIX CLAVE: el bloque pre del JSON de contacto */
+.contact-info .code-block {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-info .code-body {
+  /* FIX: wrap el pre para que no desborde en móvil */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12px;
+}
 
 /* ============================================================
    FOOTER
@@ -52,16 +69,30 @@
 .footer-copy { font-size: 11px; }
 
 /* ── Responsive ─────────────────────────────────────────── */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
   .form-body {
     padding: 16px;
   }
-  .code-body {
+  .contact-info .code-body {
     font-size: 11px;
     padding: 14px 16px;
+  }
+  .form-input {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+  .footer {
+    padding: 28px 4vw;
   }
 }

@@ -4,7 +4,13 @@
 
 .experience { border-top: 1px solid var(--border); }
 
-.timeline { position: relative; padding-left: 40px; }
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  /* FIX: no desborda */
+  width: 100%;
+  overflow: hidden;
+}
 .timeline::before {
   content: '';
   position: absolute;
@@ -13,11 +19,17 @@
   background: linear-gradient(to bottom, var(--accent), transparent);
 }
 
-.timeline-item { position: relative; margin-bottom: 48px; }
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* FIX: el punto de la timeline alineado correctamente */
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -44px; top: 20px;
+  left: -44px;
+  top: 20px;
   width: 8px; height: 8px;
   border-radius: 50%;
   background: var(--accent);
@@ -28,33 +40,53 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .timeline-card {
   background: var(--bg-2);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 28px;
+  padding: 24px;
   transition: border-color var(--transition);
+  /* FIX: no desborda */
+  width: 100%;
+  overflow: hidden;
 }
 .timeline-card:hover { border-color: var(--accent); }
 
-.commit-hash  { font-size: 11px; color: var(--accent-2); margin-bottom: 4px; }
+.commit-hash  { font-size: 11px; color: var(--accent-2); margin-bottom: 4px; word-break: break-word; }
 .company-name { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
-.job-title    { font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--text-bright); margin-bottom: 12px; }
-.job-desc     { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
+.job-title    {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 10px;
+  /* FIX: wrap títulos largos */
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.job-desc     {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 14px;
+  /* FIX: wrap texto */
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 
-.job-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.job-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .tag-chip {
   font-size: 11px;
   padding: 4px 10px;
   background: var(--accent-dim);
   color: var(--accent);
   border-radius: 4px;
+  white-space: nowrap;
 }
 
-.diff-stat  { display: flex; gap: 16px; font-size: 12px; }
+.diff-stat  { display: flex; gap: 16px; font-size: 12px; flex-wrap: wrap; }
 .additions  { color: #4caf88; }
 .deletions  { color: #f28b82; }
 
@@ -64,6 +96,7 @@
   background: transparent;
   border-style: dashed;
 }
+
 /* ── Branch badges ───────────────────────────────────────── */
 .timeline-card-top {
   margin-bottom: 8px;
@@ -101,11 +134,28 @@
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 640px) {
+  .timeline {
+    /* FIX: menos padding para pantallas pequeñas */
+    padding-left: 28px;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline-item::before {
+    /* FIX: reajustar punto al nuevo padding */
+    left: -32px;
+    top: 18px;
+    width: 7px;
+    height: 7px;
+  }
   .timeline-card {
-    padding: 18px 16px;
+    padding: 16px 14px;
   }
   .job-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+  .job-desc {
+    font-size: 12px;
   }
   .job-tags {
     gap: 6px;
@@ -117,5 +167,8 @@
   .diff-stat {
     flex-direction: column;
     gap: 4px;
+  }
+  .timeline-item {
+    margin-bottom: 28px;
   }
 }
