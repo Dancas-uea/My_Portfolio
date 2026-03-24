@@ -1,110 +1,111 @@
-# <p align="center">🚀 My Portfolio</p>
+# <p align="center">🚀 Mi Portafolio</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Estado-En%20Línea-success?style=for-the-badge&logo=github&logoColor=white" />
   <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-0A66C2?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Responsive-100%25-8A2BE2?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Deployed%20With-GitHub%20Pages-181717?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=for-the-badge&logo=github" />
 </p>
 
 <p align="center">
-  <b>A modern, responsive, and professional personal portfolio built to showcase my skills, projects, and growth as a software development student.</b>
+  <b>Un portafolio web moderno, responsivo y profesional, creado para mostrar mis habilidades, proyectos y crecimiento como estudiante de desarrollo de software.</b>
 </p>
 
 <p align="center">
   <a href="https://dancas-uea.github.io/My_Portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Portfolio-0A66C2?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/🌐%20Ver%20Portafolio-Visitar%20Sitio-0A66C2?style=for-the-badge" />
   </a>
   <a href="https://github.com/Dancas-uea/My_Portfolio" target="_blank">
-    <img src="https://img.shields.io/badge/📂%20Repository-View%20Code-111827?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/📂%20Ver%20Código-Repositorio-111827?style=for-the-badge" />
   </a>
 </p>
 
 ---
 
-## 📸 Preview
+## 📸 Vista previa
 
 <p align="center">
-  <img src="./preview.png" alt="Portfolio Preview" width="100%" />
+  <img src="./preview.png" alt="Vista previa del portafolio" width="100%" />
 </p>
 
-> ⚠️ **Important:** Add a screenshot of your portfolio inside the root folder of this repository and name it exactly:
+> ⚠️ **Importante:**
+> Sube una captura de pantalla de tu portafolio en la raíz del repositorio con el nombre exacto:
 > **`preview.png`**
 
 ---
 
-## ✨ About This Project
+## ✨ Sobre este proyecto
 
-**My Portfolio** is a personal website designed to create a strong professional online presence and showcase my abilities as a developer.
+**Mi Portafolio** es una página web personal diseñada para construir una presencia profesional en línea y mostrar mis capacidades como desarrollador.
 
-This project highlights:
+Este proyecto destaca:
 
-* 💼 **Featured projects**
-* 🧠 **Technical skills**
-* 👨‍💻 **Frontend development focus**
-* 📱 **Responsive design**
-* 🌐 **Live deployment with GitHub Pages**
-* 🚀 **A clean and modern user experience**
+* 💼 **Proyectos destacados**
+* 🧠 **Habilidades técnicas**
+* 👨‍💻 **Enfoque en desarrollo frontend**
+* 📱 **Diseño responsivo**
+* 🌐 **Despliegue en línea con GitHub Pages**
+* 🚀 **Experiencia visual limpia, moderna y profesional**
 
-This portfolio represents not only what I can build, but also my commitment to learning, consistency, and professional growth in software development.
-
----
-
-## 🌍 Live Website
-
-🔗 **Portfolio URL:**
-
-### 👉 [Visit My Portfolio](https://dancas-uea.github.io/My_Portfolio/)
+Este portafolio no solo muestra lo que puedo construir, sino también mi compromiso con el aprendizaje, la constancia y mi crecimiento dentro del desarrollo de software.
 
 ---
 
-## 🛠️ Tech Stack
+## 🌍 Sitio web en vivo
+
+🔗 **Enlace del portafolio:**
+
+### 👉 [Visitar mi portafolio](https://dancas-uea.github.io/My_Portfolio/)
+
+---
+
+## 🛠️ Tecnologías utilizadas
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode" />
 </p>
 
-### Built with:
+### Desarrollado con:
 
 * **HTML5**
 * **CSS3**
 * **JavaScript**
 * **Git & GitHub**
 * **GitHub Pages**
-* **VS Code**
+* **Visual Studio Code**
 
 ---
 
-## 🎯 Key Features
+## 🎯 Características principales
 
-* ✅ **Modern and clean UI**
-* ✅ **Responsive layout for desktop, tablet, and mobile**
-* ✅ **Well-structured sections for smooth navigation**
-* ✅ **Scalable CSS architecture by sections**
-* ✅ **Deployed online and accessible publicly**
-* ✅ **Professional project presentation**
-* ✅ **Organized folder structure**
-
----
-
-## 🧩 Sections Included
-
-This portfolio includes the following sections:
-
-* 🏠 **Home**
-* 🙋‍♂️ **About Me**
-* 🧠 **Skills**
-* 💼 **Experience**
-* 📁 **Projects**
-* 📬 **Contact**
-
-Each section was designed to create a polished and engaging experience while maintaining clarity and usability.
+* ✅ **Interfaz moderna y limpia**
+* ✅ **Diseño totalmente responsivo**
+* ✅ **Secciones organizadas para una navegación fluida**
+* ✅ **Arquitectura CSS modular por secciones**
+* ✅ **Portafolio desplegado públicamente**
+* ✅ **Presentación profesional de proyectos**
+* ✅ **Estructura clara y escalable**
 
 ---
 
-## 📂 Project Structure
+## 🧩 Secciones incluidas
 
-```bash id="pfu6qn"
+Este portafolio cuenta con las siguientes secciones:
+
+* 🏠 **Inicio**
+* 🙋‍♂️ **Sobre mí**
+* 🧠 **Habilidades**
+* 💼 **Experiencia**
+* 📁 **Proyectos**
+* 📬 **Contacto**
+
+Cada sección fue pensada para generar una primera impresión sólida, profesional y agradable para quien visite el sitio.
+
+---
+
+## 📂 Estructura del proyecto
+
+```bash id="4w9m1k"
 My_Portfolio/
 │
 ├── index.html
@@ -120,7 +121,7 @@ My_Portfolio/
 │   └── contact.css
 │
 ├── foto/
-│   └── (images and visual assets)
+│   └── (imágenes y recursos visuales)
 │
 ├── preview.png
 └── README.md
@@ -128,77 +129,77 @@ My_Portfolio/
 
 ---
 
-## 🚀 Why This Portfolio Matters
+## 🚀 ¿Por qué este portafolio es importante?
 
-This portfolio is more than just a static webpage.
+Este proyecto es más que una página web estática.
 
-It demonstrates:
+Demuestra:
 
-* 📌 My ability to build **responsive user interfaces**
-* 📌 My understanding of **HTML, CSS, and JavaScript fundamentals**
-* 📌 My use of **Git and GitHub for version control**
-* 📌 My ability to **deploy a real project publicly**
-* 📌 My initiative to create a **professional developer presence**
+* 📌 Mi capacidad para construir **interfaces responsivas**
+* 📌 Mi dominio de los fundamentos de **HTML, CSS y JavaScript**
+* 📌 Mi uso de **Git y GitHub para control de versiones**
+* 📌 Mi capacidad para **desplegar un proyecto real públicamente**
+* 📌 Mi iniciativa para construir una **presencia profesional como desarrollador**
 
-It serves as a practical reflection of both my technical skills and my discipline as a developer in progress.
-
----
-
-## 📈 Future Improvements
-
-Planned upgrades for future versions:
-
-* [ ] Add **dark/light theme toggle**
-* [ ] Add **downloadable CV button**
-* [ ] Improve **animations and transitions**
-* [ ] Add **project filters by category**
-* [ ] Integrate **contact form functionality**
-* [ ] Improve **SEO metadata**
-* [ ] Migrate to **React + Tailwind CSS** in a future version
-* [ ] Add **Framer Motion animations** in a future rebuild
+Es una muestra práctica de mis habilidades técnicas y de mi disciplina como futuro profesional del software.
 
 ---
 
-## ⚡ Performance & Goals
+## 📈 Mejoras futuras
 
-This project was built with the following goals in mind:
+Algunas mejoras planificadas para próximas versiones:
 
-* **Clarity**
-* **Professional presentation**
-* **Responsive behavior**
-* **Simple but strong architecture**
-* **Recruiter-friendly structure**
-* **Easy maintainability and future scalability**
+* [ ] Agregar **modo oscuro / claro**
+* [ ] Incluir botón para **descargar CV**
+* [ ] Mejorar **animaciones y transiciones**
+* [ ] Agregar **filtro de proyectos**
+* [ ] Integrar **formulario de contacto funcional**
+* [ ] Optimizar **SEO y metadatos**
+* [ ] Migrar a **React + Tailwind CSS** en una futura versión
+* [ ] Añadir **animaciones más avanzadas** en una versión renovada
 
 ---
 
-## 🖥️ Run Locally
+## ⚡ Objetivos del proyecto
 
-Clone the repository:
+Este portafolio fue desarrollado con los siguientes objetivos:
 
-```bash id="vh9l0g"
+* **Claridad**
+* **Presentación profesional**
+* **Diseño responsivo**
+* **Código organizado**
+* **Buena experiencia de usuario**
+* **Escalabilidad futura**
+
+---
+
+## 🖥️ Ejecución local
+
+Clona el repositorio:
+
+```bash id="9r77n8"
 git clone https://github.com/Dancas-uea/My_Portfolio.git
 ```
 
-Go into the project folder:
+Entra a la carpeta del proyecto:
 
-```bash id="52tt3e"
+```bash id="1p0g6i"
 cd My_Portfolio
 ```
 
-Then open:
+Luego abre:
 
-```bash id="v3rrf0"
+```bash id="45h83y"
 index.html
 ```
 
-in your browser.
+en tu navegador.
 
 ---
 
-## 📬 Contact
+## 📬 Contacto
 
-If you'd like to connect, collaborate, or check out my work:
+Si deseas conectar conmigo, revisar mi trabajo o colaborar en algún proyecto:
 
 <p align="left">
   <a href="https://github.com/Dancas-uea" target="_blank">
@@ -206,50 +207,50 @@ If you'd like to connect, collaborate, or check out my work:
   </a>
 </p>
 
-> 💡 **Optional (recommended):**
-> Add your **LinkedIn** and **email** here later to make your portfolio even more recruiter-friendly.
+> 💡 **Recomendación (muy pro):**
+> Luego agrega aquí tu **LinkedIn** y tu **correo** para que se vea todavía más profesional.
 
-Example:
+Ejemplo:
 
-```md id="j6y6gb"
+```md id="gqv0ls"
 <p align="left">
   <a href="https://www.linkedin.com/in/TU-LINKEDIN/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=for-the-badge&logo=linkedin" />
   </a>
   <a href="mailto:tuemail@example.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Email-Escríbeme-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
 ```
 
 ---
 
-## 🤝 Contribution
+## 🤝 Contribuciones
 
-Although this is a personal project, feedback is always welcome.
+Aunque este es un proyecto personal, toda retroalimentación es bienvenida.
 
-If you'd like to support this project:
+Si deseas apoyarlo:
 
-* ⭐ Star this repository
-* 🍴 Fork it
-* 👀 Explore the code
-* 💬 Share suggestions
+* ⭐ Dale una estrella al repositorio
+* 🍴 Haz un fork
+* 👀 Explora el código
+* 💬 Comparte sugerencias
 
 ---
 
-## 🏆 Final Note
+## 🏆 Nota final
 
-This portfolio represents a step forward in my journey as a **Software Development student**.
+Este portafolio representa un paso importante en mi camino como **estudiante de desarrollo de software**.
 
-It reflects:
+Refleja:
 
-* curiosity,
-* consistency,
-* practical learning,
-* and the intention to keep building better digital experiences.
+* curiosidad,
+* constancia,
+* aprendizaje práctico,
+* y el deseo de seguir construyendo experiencias digitales cada vez mejores.
 
 ---
 
 <p align="center">
-  <b>Built with passion, discipline, and the mindset of becoming a great developer. 🚀</b>
+  <b>Construido con pasión, disciplina y visión de crecimiento como desarrollador. 🚀</b>
 </p>
