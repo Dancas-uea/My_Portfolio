@@ -204,14 +204,8 @@ Si deseas conectar conmigo, revisar mi trabajo o colaborar en algún proyecto:
   </a>
 </p>
 
-> 💡 **Recomendación (muy pro):**
-> Luego agrega aquí tu **LinkedIn** y tu **correo** para que se vea todavía más profesional.
-
-Ejemplo:
-
-```md id="gqv0ls"
 <p align="left">
-  <a href="https://www.linkedin.com/in/TU-LINKEDIN/" target="_blank">
+  <a href="https://www.linkedin.com/in/castillo-cabrera-carlos-daniel-8232422b4/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=for-the-badge&logo=linkedin" />
   </a>
   <a href="mailto:tuemail@example.com">
