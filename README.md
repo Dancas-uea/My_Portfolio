@@ -25,12 +25,9 @@
 ## 📸 Vista previa
 
 <p align="center">
-  <img src="./preview.png" alt="Vista previa del portafolio" width="100%" />
+  <img width="800" height="7317" alt="image" src="https://github.com/user-attachments/assets/ef6a2edc-ae49-4657-b73c-3d3ab7fd8db0" />
 </p>
 
-> ⚠️ **Importante:**
-> Sube una captura de pantalla de tu portafolio en la raíz del repositorio con el nombre exacto:
-> **`preview.png`**
 
 ---
 
