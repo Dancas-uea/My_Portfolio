@@ -788,7 +788,7 @@ console.log('%c> Portfolio loaded. Welcome! 🚀', 'color:#00d4aa; font-family:m
         const baseS = 0.20 + d * 0.28;
         const s     = isSelected ? baseS * 1.3 : baseS;
         sprite.scale.set(s, s * 1.25, 1);
-
+q
         if (!isFiltered) {
           sprite.material.opacity = 0.07;
         } else if (isSelected) {
