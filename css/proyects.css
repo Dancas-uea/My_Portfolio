@@ -59,3 +59,13 @@
 .proj-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .projects-footer { text-align: center; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    padding: 20px;
+  }
+}

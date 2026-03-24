@@ -133,21 +133,69 @@ body {
 /* ============================================================
    RESPONSIVE GLOBAL
    ============================================================ */
+
+/* ── Tablet 900px ── */
 @media (max-width: 900px) {
   .hero-content  { grid-template-columns: 1fr; gap: 40px; }
   .hero-right    { display: none; }
-  .about-grid    { grid-template-columns: 1fr; }
+  .about-grid    { grid-template-columns: 1fr !important; }
   .contact-grid  { grid-template-columns: 1fr; }
+  .section       { padding: 80px 5vw; }
 }
 
+/* ── Mobile 640px ── */
 @media (max-width: 640px) {
-  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0;
-    flex-direction: column; background: var(--bg-2); padding: 20px;
-    border-bottom: 1px solid var(--border); gap: 16px; }
+
+  /* NAV */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 57px; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(10, 12, 15, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 8px 0 16px;
+    border-bottom: 1px solid var(--border);
+    gap: 0;
+    z-index: 99;
+    height: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  }
+  .nav-links li { list-style: none; }
+  .nav-links li + li { border-top: 1px solid var(--border); }
+  .nav-links a {
+    display: block;
+    padding: 14px 6vw;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
   .nav-links.open { display: flex; }
-  .nav-toggle { display: flex; }
-  .hero    { padding: 100px 5vw 40px; }
-  .section { padding: 70px 5vw; }
-  .timeline { padding-left: 24px; }
+  .nav-toggle     { display: flex; }
+
+  /* HERO */
+  .hero    { padding: 90px 5vw 40px; }
+  .section { padding: 60px 5vw; }
+  .section-header { margin-bottom: 36px; }
+  .hero-tabs { overflow-x: auto; }
+
+  /* TIMELINE */
+  .timeline          { padding-left: 24px; }
   .timeline-item::before { left: -28px; }
+
+  /* PROJECTS */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* ABOUT stats */
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+
+  /* BUTTONS */
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .btn       { width: 100%; justify-content: center; }
+}
+
+/* ── Small 400px ── */
+@media (max-width: 400px) {
+  .about-stats { grid-template-columns: 1fr; }
+  .hero-title  { font-size: 2rem; }
 }

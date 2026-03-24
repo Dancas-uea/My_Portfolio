@@ -50,3 +50,18 @@
 .footer p    { font-size: 13px; color: var(--text-muted); }
 .footer-sub  { font-size: 12px; }
 .footer-copy { font-size: 11px; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .form-body {
+    padding: 16px;
+  }
+  .code-body {
+    font-size: 11px;
+    padding: 14px 16px;
+  }
+}

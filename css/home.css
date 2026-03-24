@@ -337,3 +337,56 @@
   margin-top: 40px;
   animation: bounce 2s infinite;
 }
+
+/* ── Nav toggle animado (hamburger → X) ─────────────────── */
+.nav-toggle span {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Responsive navbar / hero ────────────────────────────── */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 14px 5vw;
+  }
+  .nav-brand {
+    min-width: 0;
+    flex: 1;
+  }
+  .nav-keyframe {
+    min-width: 0;
+    overflow: hidden;
+  }
+  #typewriter-keyword {
+    font-size: 10px;
+  }
+  .logo-static {
+    font-size: 1.1rem;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+  .hero-desc {
+    font-size: 13px;
+  }
+  .loaded-modules {
+    gap: 6px;
+  }
+  .mod {
+    font-size: 9px;
+    padding: 2px 7px;
+  }
+  .scroll-hint {
+    display: none;
+  }
+}

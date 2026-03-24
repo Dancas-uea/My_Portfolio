@@ -10,7 +10,7 @@
 .about { border-top: 1px solid var(--border); padding: 40px 6vw; }
 /* --- GRID Y ESTRUCTURA --- */
 .about-grid {display: grid;
-  grid-template-columns: 430px 1fr;
+  grid-template-columns: minmax(0, 430px) 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -147,7 +147,7 @@ transition: 0.3s;
 .about-terminal-wrapper {
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 100%;
   opacity: 0; 
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
@@ -277,3 +277,38 @@ transition: 0.3s;
 .stat-icon { font-size: 14px; color: var(--accent); }
 .stat-bottom { display: flex; align-items: baseline; gap: 8px; }
 .stat-unit { font-size: 12px; color: var(--text-muted); text-transform: uppercase; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about { padding: 40px 5vw; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-terminal-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-avatar-col {
+    padding: 32px 20px;
+  }
+  .avatar-frame {
+    width: 140px;
+    height: 140px;
+  }
+  .terminal-body {
+    padding: 20px;
+  }
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat {
+    padding: 16px;
+  }
+  .stat-num {
+    font-size: 1.6rem;
+  }
+}
