@@ -1,0 +1,153 @@
+/* ============================================================
+   PORTFOLIO — style.css
+   Motor principal: Reset, Tokens, Utilidades, Scrollbar,
+   Animaciones globales, Responsive
+   ============================================================ */
+
+/* ---------- RESET & TOKENS ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0a0c0f;
+  --bg-2:       #10141a;
+  --bg-3:       #161c25;
+  --border:     #1e2836;
+  --accent:     #00d4aa;
+  --accent-2:   #0096ff;
+  --accent-dim: rgba(0, 212, 170, 0.12);
+  --text:       #c8d6e5;
+  --text-muted: #5a7087;
+  --text-bright:#eaf2ff;
+  --red:        #ff5f5b;
+  --yellow:     #ffbe3b;
+  --green:      #00d4aa;
+  --mono:       'JetBrains Mono', monospace;
+  --display:    'Syne', sans-serif;
+  --radius:     8px;
+  --transition: 0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ---------- UTILITIES ---------- */
+.accent { color: var(--accent); }
+.section { padding: 100px 6vw; max-width: 1200px; margin: 0 auto; }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 60px; }
+.section-header h2 {
+  font-family: var(--mono);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--text-bright);
+  font-weight: 500;
+}
+.section-label {
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+/* La clase .reveal la agrega el JS dinámicamente, así que
+   los elementos son visibles por defecto y se animan cuando el JS corre */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback: si JS falla o tarda, los elementos son visibles igual */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   ANIMATIONS GLOBALES
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 4px var(--green); }
+  50%       { box-shadow: 0 0 12px var(--green); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes blink-nav {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ============================================================
+   RESPONSIVE GLOBAL
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero-content  { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right    { display: none; }
+  .about-grid    { grid-template-columns: 1fr; }
+  .contact-grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0;
+    flex-direction: column; background: var(--bg-2); padding: 20px;
+    border-bottom: 1px solid var(--border); gap: 16px; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: flex; }
+  .hero    { padding: 100px 5vw 40px; }
+  .section { padding: 70px 5vw; }
+  .timeline { padding-left: 24px; }
+  .timeline-item::before { left: -28px; }
+}

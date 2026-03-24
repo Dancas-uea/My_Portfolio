@@ -1,0 +1,368 @@
+/* ============================================================
+   skills.css — Sección Skills  |  Full Pro Version
+   ============================================================ */
+
+.skills { border-top: 1px solid var(--border); }
+
+/* ── Globe wrapper ─────────────────────────────────────────── */
+.skills-globe-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Hint superior */
+.globe-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  border: 1px solid var(--border);
+  padding: 7px 20px;
+  border-radius: 20px;
+  background: rgba(16, 20, 26, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+/* ── Filtros por categoría ─────────────────────────────────── */
+.globe-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
+.globe-filter-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.globe-filter-btn:hover {
+  border-color: var(--cat-color, var(--accent));
+  color: var(--cat-color, var(--accent));
+}
+
+.globe-filter-btn.active {
+  background: color-mix(in srgb, var(--cat-color, var(--accent)) 15%, transparent);
+  border-color: var(--cat-color, var(--accent));
+  color: var(--cat-color, var(--accent));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--cat-color, var(--accent)) 20%, transparent);
+}
+
+/* ── Contenedor del canvas ─────────────────────────────────── */
+#globeWrapper {
+  width: 100%;
+  max-width: 820px;
+  height: 540px;
+  position: relative;
+  /* Glow cian — match con --accent del portfolio */
+  filter:
+    drop-shadow(0 0 35px rgba(0, 212, 170, 0.30))
+    drop-shadow(0 0 70px rgba(0, 150, 255, 0.15))
+    drop-shadow(0 0 120px rgba(0, 212, 170, 0.08));
+}
+
+#globeWrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  background: transparent !important;
+}
+
+/* Pulso del glow (animado) */
+@keyframes globeGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 35px rgba(0, 212, 170, 0.30))
+      drop-shadow(0 0 70px rgba(0, 150, 255, 0.15))
+      drop-shadow(0 0 120px rgba(0, 212, 170, 0.08));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 50px rgba(0, 212, 170, 0.45))
+      drop-shadow(0 0 90px rgba(0, 150, 255, 0.22))
+      drop-shadow(0 0 150px rgba(0, 212, 170, 0.12));
+  }
+}
+
+#globeWrapper {
+  animation: globeGlow 4s ease-in-out infinite;
+}
+
+/* ── Tooltip ───────────────────────────────────────────────── */
+.globe-tooltip {
+  position: fixed;
+  z-index: 999;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  background: rgba(10, 12, 15, 0.92);
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+.globe-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Paneles laterales de skill ────────────────────────────── */
+.skill-panel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  width: 260px;
+  background: rgba(10, 12, 15, 0.96);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 20px 20px;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-panel--left {
+  left: 0;
+  transform: translateY(-50%) translateX(-20px);
+}
+
+.skill-panel--right {
+  right: 0;
+  transform: translateY(-50%) translateX(20px);
+}
+
+.skill-panel.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-50%) translateX(0);
+  border-color: rgba(0, 212, 170, 0.3);
+  box-shadow:
+    0 0 30px rgba(0, 212, 170, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Cerrar */
+.skill-panel-close {
+  position: absolute;
+  top: 10px; right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  font-family: var(--mono);
+}
+.skill-panel-close:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Logo */
+.skill-panel-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.sp-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+/* Badge categoría */
+.sp-cat-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Nombre */
+.sp-name {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.sp-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+/* Meta (desde / proyectos) */
+.sp-meta {
+  margin-bottom: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.sp-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.sp-meta-key {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.sp-meta-val {
+  font-size: 12px;
+  color: var(--text);
+}
+
+/* Barra de nivel */
+
+.sp-level-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.sp-level-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sp-level-pct {
+  font-size: 12px;
+  font-weight: 700;
+}
+.sp-level-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.sp-level-bar {
+  height: 100%;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Tags nivel */
+.sp-level-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.sp-level-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+.sp-level-tag.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 212, 170, 0.1);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  #globeWrapper { height: 440px; }
+  .skill-panel {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    top: auto;
+    width: 100%;
+    transform: translateY(100%);
+    border-radius: 16px 16px 0 0;
+  }
+  .skill-panel--left,
+  .skill-panel--right {
+    left: 0; right: 0;
+    transform: translateY(100%);
+  }
+  .skill-panel.open {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  #globeWrapper { height: 360px; }
+  .globe-filters { gap: 6px; }
+  .globe-filter-btn { font-size: 10px; padding: 4px 10px; }
+}
+
+/* ── Skill pills (si se usan en otro lado) ─────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.skill-category {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  transition: border-color var(--transition);
+}
+.skill-category:hover { border-color: var(--accent); }
+.cat-title {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+.skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  font-size: 11px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  transition: all var(--transition);
+  cursor: default;
+}
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* Ocultar canvas viejo */
+#skillsGlobe { display: none; }

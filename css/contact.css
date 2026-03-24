@@ -1,0 +1,52 @@
+/* ============================================================
+   contact.css — Sección Contact + Footer
+   ============================================================ */
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact { border-top: 1px solid var(--border); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.form-block { width: 100%; }
+.form-body  { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.form-label { font-size: 11px; color: var(--text-muted); }
+
+.form-input {
+  width: 100%;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--text-bright);
+  font-family: var(--mono);
+  font-size: 13px;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.form-input:focus { border-color: var(--accent); }
+.form-textarea { resize: vertical; min-height: 100px; }
+
+.run-btn    { width: 100%; justify-content: center; margin-top: 8px; }
+.form-status { font-size: 12px; min-height: 18px; color: var(--accent); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 6vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer p    { font-size: 13px; color: var(--text-muted); }
+.footer-sub  { font-size: 12px; }
+.footer-copy { font-size: 11px; }

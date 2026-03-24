@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asmo — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ============ CSS ============ -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/proyects.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="logo-static">
+        <span class="accent">&lt;</span>Dev<span class="accent">/&gt;</span>
+      </div>
+      <div class="nav-keyframe">
+        <span class="prefix"> ::</span>
+        <span id="typewriter-keyword"></span>
+        <span class="cursor-nav">_</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="system-badge">
+          <span class="dot green"></span>
+          SYSTEM.KERNEL :: v2.5.0 ONLINE
+        </div>
+
+        <h1 class="hero-title">
+          Hello, I'm<br/>
+          <span class="name-highlight">Carlos Daniel</span>
+        </h1>
+
+        <p class="hero-role">
+          <span class="tag">&lt;</span>Ingeniero de Software<span class="tag">/&gt;</span>
+        </p>
+
+        <p class="hero-desc">
+          Especializado en sistemas distribuidos, arquitectura en tiempo real
+          y aplicaciones de alto rendimiento.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+          <a href="https://github.com/Dancas-uea" class="btn btn-ghost" target="_blank">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+              height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg"
+              style="vertical-align: middle; margin-right: 8px;">
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-41.4-43.5c1.1 0 1.1-2 0-2 0 0-11.4 29.1-27.8-36.6z"></path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="loaded-modules">
+          <span class="mod-label">LOADED_MODULES:</span>
+          <span class="mod">REACT</span>
+          <span class="mod">NEXT.JS</span>
+          <span class="mod">NODE.JS</span>
+          <span class="mod">TYPESCRIPT</span>
+          <span class="mod">JAVA</span>
+          <span class="mod">PYTHON</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="code-block">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">portfolio.tsx</span>
+          </div>
+          <pre class="code-body"><span class="ln">1 // Welcome to my workspace</span>
+<span class="ln">2</span> <span class="kw">import</span> { Developer } <span class="kw">from</span> <span class="str">'./universe'</span>;
+<span class="ln">3</span>
+<span class="ln">4</span> <span class="kw">const</span> Portfolio = () <span class="kw">=&gt;</span> {
+<span class="ln">5</span>   <span class="kw">return</span> (
+<span class="ln">6</span>     <span class="tag">&lt;Developer</span>
+<span class="ln">7</span>       name=<span class="str">"Carlos - AsmoRoot"</span>
+<span class="ln">8</span>       role=<span class="str">"Engineer Developer"</span>
+<span class="ln">9</span>       passion=<span class="str">"Loco por lo desconocido"</span>
+<span class="ln">10</span>    <span class="tag">/&gt;</span>
+<span class="ln">11</span>   );
+<span class="ln">12</span> };
+<span class="ln">13</span>
+<span class="ln">14</span> <span class="kw">export default</span> Portfolio;</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">▼ scroll</div>
+  </section>
+
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section"  id="about">
+    <div class="section-header">
+      <span class="section-label">#</span>
+      <h2>About.system</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-avatar-col">
+        <div class="avatar-frame">
+          <img src="foto/Perfil.png" alt="Carlos - AsmoRoot" />
+        </div>
+
+        <div class="about-meta">
+          <div class="meta-row">
+            <span class="meta-key">OPERATOR</span>
+            <span class="meta-val operator-name">Carlos - AsmoRoot</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">ROLE</span>
+            <span class="meta-val role-name">Ingeniero de Software</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">LOCATION</span>
+            <span class="meta-val">Madrid, España</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">STATUS</span>
+            <span class="meta-val status-online">ONLINE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content-col">
+        <div class="about-terminal-wrapper">
+          <div class="terminal-header">
+            <div class="header-content">
+              <span class="terminal_icon">$_</span>
+              <span class="terminal_tittle">user_profile.log</span>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">➜</span>
+              <span class="cmd">whoami.txt</span>
+            </div>
+            <p class="terminal-output">
+              Soy un apasionado ingeniero de software con más de 4 años de experiencia en el desarrollo
+              de aplicaciones web y sistemas distribuidos.
+            </p>
+            <div class="terminal-line">
+              <span class="prompt">➜</span>
+              <span class="cmd">cat mission.txt</span>
+            </div>
+            <p class="terminal-output">
+              Mi misión es transformar ideas complejas en productos digitales que impacten positivamente
+              a los usuarios.
+            </p>
+          </div>
+        </div>
+        <!-- Seccion de estadisticas -->
+        <div class="about-stats">
+          <!----------EXPERIENCE-->
+          <div class="stat">
+            <div class="stat-top">
+              <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+              </svg>
+              <span class="stat-label">EXPERIENCE</span>
+            </div>
+            
+          <div class="stat-bottom">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">YRS EXP</span>
+          </div>
+          </div>
+          <!----------PROYECTOS-->
+          <div class="stat">
+            <div class="stat-top">
+              <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>  
+              <span class="stat-label">PROJECTS</span>
+            </div>
+          <div class="stat-bottom">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">DEP</span>
+          </div>
+          </div>
+          <!----------CAFFEINE-->
+          <div class="stat">
+            <div class="stat-top">
+              <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/>
+              </svg>
+              <span class="stat-label">CAFFEINE</span>
+            </div>
+          <div class="stat-bottom">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">ML</span>
+          </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills section"  id="skills">
+    <div class="section-header">
+      <span class="section-label">#</span>
+      <h2>Skills.json</h2>
+    </div>
+    <div class="skills-globe-wrapper">
+      <p class="globe-hint">⊕ Drag to explore skills universe</p>
+      <div id="globeWrapper" style="width:100%;height:580px;cursor:grab;"></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="experience section"  id="experience">
+    <div class="section-header">
+      <span class="section-label">▸</span>
+      <h2>git log --stat --oneline</h2>
+    </div>
+ 
+    <div class="timeline">
+ 
+      <!-- 2024 - Presente: ITI -->
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - Presente</div>
+        <div class="timeline-card">
+          <div class="timeline-card-top">
+            <span class="branch-badge branch-dev">⌥ dev</span>
+          </div>
+          <div class="commit-hash">HEAD → software-engineering</div>
+          <div class="company-name">Universidad — Ing. en Tecnologías de la Información</div>
+          <h3 class="job-title">Student Software Engineer @ UEA</h3>
+          <p class="job-desc">Cursando ITI desde primer semestre. Construyendo proyectos en web, algoritmos y bases de datos. Aplicando ingeniería de software moderna con control de versiones y desarrollo ágil.</p>
+          <div class="job-tags">
+            <span class="tag-chip">JavaScript</span>
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">HTML/CSS</span>
+            <span class="tag-chip">Git</span>
+            <span class="tag-chip">SQL</span>
+          </div>
+          <div class="diff-stat">
+            <span class="additions">+∞ learning</span>
+            <span class="deletions">-0 giving up</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- 2023: Técnico de Laboratorio Ambiental -->
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-card">
+          <div class="timeline-card-top">
+            <span class="branch-badge branch-env">⌥ env</span>
+          </div>
+          <div class="commit-hash">commit: lab-analyst · certified</div>
+          <div class="company-name">Laboratorio Ambiental</div>
+          <h3 class="job-title">Técnico de Laboratorio Ambiental</h3>
+          <p class="job-desc">Ejecución de ensayos físico-químicos y microbiológicos en matrices ambientales: agua, suelo y aire. Manejo de equipos analíticos, registro bajo normas ISO y aseguramiento de calidad en cadena de custodia de muestras.</p>
+          <div class="job-tags">
+            <span class="tag-chip">Análisis de Agua</span>
+            <span class="tag-chip">Análisis de Suelos</span>
+            <span class="tag-chip">Monitoreo de Aire</span>
+            <span class="tag-chip">ISO/IEC 17025</span>
+            <span class="tag-chip">QA/QC</span>
+          </div>
+          <div class="diff-stat">
+            <span class="additions">+precision</span>
+            <span class="deletions">-contamination</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- 2022: Educador Ambiental FUDELA -->
+      <div class="timeline-item">
+        <div class="timeline-date">2022</div>
+        <div class="timeline-card">
+          <div class="timeline-card-top">
+            <span class="branch-badge branch-env">⌥ env</span>
+          </div>
+          <div class="commit-hash">commit: volunteer · recognized</div>
+          <div class="company-name">FUDELA — Fundación de Educación Ambiental</div>
+          <h3 class="job-title">Educador Ambiental Certificado @ FUDELA</h3>
+          <p class="job-desc">Reconocimiento oficial como Educador Ambiental. Diseño y facilitación de actividades de sensibilización en comunidades, con enfoque en conservación, manejo de residuos y biodiversidad local.</p>
+          <div class="job-tags">
+            <span class="tag-chip">Educación Ambiental</span>
+            <span class="tag-chip">Comunicación</span>
+            <span class="tag-chip">ONG</span>
+            <span class="tag-chip">Voluntariado</span>
+          </div>
+          <div class="diff-stat">
+            <span class="additions">+awareness</span>
+            <span class="deletions">-carbon footprint</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- 2021: Artículo Científico -->
+      <div class="timeline-item">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-card">
+          <div class="timeline-card-top">
+            <span class="branch-badge branch-research">⌥ research</span>
+          </div>
+          <div class="commit-hash">commit: paper · published</div>
+          <div class="company-name">Investigación Académica</div>
+          <h3 class="job-title">Autor — Artículo Científico</h3>
+          <p class="job-desc">Publicación sobre análisis de cargos de rectores en instituciones públicas. Metodología cuantitativa y cualitativa, revisión bibliográfica y análisis estadístico de datos institucionales.</p>
+          <div class="job-tags">
+            <span class="tag-chip">Investigación</span>
+            <span class="tag-chip">Análisis Estadístico</span>
+            <span class="tag-chip">Redacción Científica</span>
+            <span class="tag-chip">Gestión Pública</span>
+          </div>
+          <div class="diff-stat">
+            <span class="additions">+published</span>
+            <span class="deletions">-drafts</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- 2019-2023: Ingeniería Ambiental -->
+      <div class="timeline-item">
+        <div class="timeline-date">2019 - 2023</div>
+        <div class="timeline-card">
+          <div class="timeline-card-top">
+            <span class="branch-badge branch-env">⌥ env</span>
+          </div>
+          <div class="commit-hash">commit: degree · completed</div>
+          <div class="company-name">Universidad — Ingeniería Ambiental</div>
+          <h3 class="job-title">Environmental Engineer — Graduated</h3>
+          <p class="job-desc">Ingeniero Ambiental titulado. Formación en gestión de recursos naturales, evaluación de impacto ambiental y sistemas de gestión ISO 14001. Base técnica que potencia mi visión de software para sostenibilidad.</p>
+          <div class="job-tags">
+            <span class="tag-chip">EIA</span>
+            <span class="tag-chip">Gestión Ambiental</span>
+            <span class="tag-chip">GIS</span>
+            <span class="tag-chip">ISO 14001</span>
+          </div>
+          <div class="diff-stat">
+            <span class="additions">+degree earned</span>
+            <span class="deletions">-sleepless nights</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Initial commit -->
+      <div class="timeline-item initial">
+        <div class="timeline-date">2019</div>
+        <div class="timeline-card initial-card">Initial Commit — Hello World 🌱</div>
+      </div>
+ 
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects section"  id="projects">
+    <div class="section-header">
+      <span class="section-label">#</span>
+      <h2>ls -la ~/projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="proj-visibility">Public</span>
+          <h3 class="proj-name">nombre-proyecto-1</h3>
+        </div>
+        <p class="proj-desc">Descripción breve del proyecto. Qué hace, su impacto o escala.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Node.js</span>
+          <span class="proj-tag">PostgreSQL</span>
+          <span class="proj-tag">Docker</span>
+        </div>
+        <div class="proj-stats">
+          <span>⭐ 120</span>
+          <span>🍴 30</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" class="proj-link">GitHub</a>
+          <a href="#" class="proj-link">Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="proj-visibility">Public</span>
+          <h3 class="proj-name">nombre-proyecto-2</h3>
+        </div>
+        <p class="proj-desc">Descripción breve del proyecto. Qué hace, su impacto o escala.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">React</span>
+          <span class="proj-tag">TypeScript</span>
+          <span class="proj-tag">AWS</span>
+        </div>
+        <div class="proj-stats">
+          <span>⭐ 85</span>
+          <span>🍴 12</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" class="proj-link">GitHub</a>
+          <a href="#" class="proj-link">Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="proj-visibility">Public</span>
+          <h3 class="proj-name">nombre-proyecto-3</h3>
+        </div>
+        <p class="proj-desc">Descripción breve del proyecto. Qué hace, su impacto o escala.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Next.js</span>
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">MongoDB</span>
+        </div>
+        <div class="proj-stats">
+          <span>⭐ 200</span>
+          <span>🍴 45</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" class="proj-link">GitHub</a>
+          <a href="#" class="proj-link">Demo</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects-footer">
+      <a href="https://github.com/TU_USUARIO" class="btn btn-ghost" target="_blank">
+        Ver todos los repositorios →
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section"  id="contact">
+    <div class="section-header">
+      <span class="section-label">#</span>
+      <h2>./contact.exe</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="code-block">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">contact_info.json</span>
+          </div>
+          <pre class="code-body">
+{
+  <span class="str">"status"</span>: <span class="str">"available"</span>,
+  <span class="str">"email"</span>: <span class="str">"dc0607882@gmail.com"</span>,
+  <span class="str">"socials"</span>: {
+    <span class="str">"github"</span>: <span class="str">"@Dancas-uea"</span>,
+    <span class="str">"linkedin"</span>: <span class="str">"linkedin.com/in/Dancas-uea"</span>
+  },
+  <span class="str">"location"</span>: <span class="str">"Madrid, España"</span>
+}</pre>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <div class="code-block form-block">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">sendMessage.ts</span>
+          </div>
+          <div class="form-body">
+            <label class="form-label">// Tu nombre</label>
+            <input type="text" class="form-input" id="formName" placeholder="Name" />
+
+            <label class="form-label">// Tu email</label>
+            <input type="email" class="form-input" id="formEmail" placeholder="email@example.com" />
+
+            <label class="form-label">// Tu mensaje</label>
+            <textarea class="form-input form-textarea" id="formMessage" placeholder="Escribe tu mensaje..."></textarea>
+
+            <button class="btn btn-primary run-btn" id="sendBtn">▶ Run Script</button>
+            <div class="form-status" id="formStatus"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p>Carlos Daniel | Software Engineer</p>
+    <p class="footer-sub">Built with ❤ using HTML, CSS & JS</p>
+    <p class="footer-copy">© 2026 Carlos Daniel. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
